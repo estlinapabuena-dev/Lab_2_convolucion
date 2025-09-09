@@ -211,6 +211,37 @@ Esta sección del laboratorio se centra en la aplicación de la **correlación c
   x2[nTs] = sin(2π * 100 * nTs) = sin(n * π/4)
 
 ### 2. Correlación Cruzada
+## Implementaciónen Python  
+
+El siguiente código realiza la generación de las señales, el cálculo de la correlación cruzada y la representación gráfica del resultado:  
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parámetros
+Ts = 1.25e-3   # Periodo de muestreo dado por la guía
+n = np.arange(9)   # Rango: 0 <= n < 9
+f = 100   # Frecuencia en Hz
+
+# Definición de señales
+x1 = np.cos(2 * np.pi * f * n * Ts)   # Señal cosenoidal
+x2 = np.sin(2 * np.pi * f * n * Ts)   # Señal senoidal
+
+# Cálculo de la correlación cruzada
+correlacion = np.correlate(x1, x2, mode='full')
+print("Correlación cruzada (vector resultado):", correlacion)
+
+# Representación gráfica
+t_corr = np.arange(-len(n) + 1, len(n))
+plt.figure(figsize=(8, 4))
+plt.stem(t_corr, correlacion)
+plt.xlabel("Desplazamiento")
+plt.ylabel("Correlación")
+plt.title("Correlación cruzada entre x1[n] y x2[n]")
+plt.grid()
+plt.show()
+
 ### 3. ¿En qué situaciones resulta útil aplicar la correlación cruzada en el procesamiento digital de señales?
 
 # Parte C

@@ -1,8 +1,7 @@
 # Laboratorio 2 - Convolución, Correlación y Transformada de Fourier
 **Universidad Militar Nueva Granada**  
 **Asignatura:** Laboratorio de Procesamiento Digital de Señales  
-**Estudiantes:** [Maria Jose Peña Velandia, Joshara Valentina Palacios, Lina Marcela Pabuena]  
-**Fecha:** Septiembre 2025  
+**Estudiantes:** [Lina Marcela Pabuena]    
 **Título de la práctica:** Convolución, correlación y transformada de Fourier
 
 ## Objetivos
